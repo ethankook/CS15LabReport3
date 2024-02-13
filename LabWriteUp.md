@@ -154,5 +154,9 @@ Output:
 The code finds and lists the absolute path for all files in the given directory and subdirectories that contain `/About_LSC` in their respective path. The `ipath` option can be used in junction with the `type` option to filter the results to only a certain type ( in this case, returns all files, and no directories ). This command can be useful when, similarly to the last command, you know part of the path for a file, and do not know the location of it. In this case, you would be searching for a file while knowing part of the path. 
 
 
+Sources: 
+
+![link](https://www.redhat.com/sysadmin/linux-find-command)
+
 
 
