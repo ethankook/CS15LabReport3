@@ -70,6 +70,7 @@ find technical/ -name '*.txt'
 Output: 
 ![image](LR3SS3.png)
 
+
 The code finds all files in the `technical` directory that ends in `.txt`. This can be useful when searching for all of the files of a certain type ( in this case, finding all text files in the directory ).
 
 2) 
