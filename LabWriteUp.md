@@ -68,8 +68,8 @@ The fix addresses the code because in the buggy code, the program would change t
 find technical/ -name '*.txt'
 ```
 Output: 
-![image](LR3SS3.png)
 
+![image](LR3SS3.png)
 
 The code finds all files in the `technical` directory that ends in `.txt`. This can be useful when searching for all of the files of a certain type ( in this case, finding all text files in the directory ).
 
@@ -78,6 +78,7 @@ The code finds all files in the `technical` directory that ends in `.txt`. This 
 find technical/ -name pmed.0020075.txt
 ```
 Output:
+
 ![image](LR3SS4.png)
 
 The code finds the absolute path of a file named `pmed.0020075.txt` in the `technical` directory. This can be useful if you know the name of a file but don't know the location. It will return the absolute path, showing the directories leading to the file. 
