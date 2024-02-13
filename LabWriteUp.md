@@ -4,7 +4,6 @@
 
 The bug I chose was the bug in `ArrayExamples.java`, specifically in the `reversed(int arr)` method. This method is supposed to take an integer array and return a new array with the elements in reversed order.
 
-  }
 
 
 1) A failure-inducing input for the buggy program, as a JUnit test and any associated code:
