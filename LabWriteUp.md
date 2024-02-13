@@ -2,17 +2,7 @@
 
 ## Part 1 - Bugs
 
-The bug I chose was the bug in `ArrayExamples.java`, specifically in the `reversed(int arr)` method. This method is supposed to take an integer array and return a new array with the elements in reversed order. The code for the method is shown below.
-
-```
-    # code block
-    static int[] reversed(int[] arr) {
-    int[] newArray = new int[arr.length]; 
-    for(int i = 0; i < arr.length; i += 1) {
-      arr[i] = newArray[arr.length - i - 1];
-    }
-    return arr;
-```
+The bug I chose was the bug in `ArrayExamples.java`, specifically in the `reversed(int arr)` method. This method is supposed to take an integer array and return a new array with the elements in reversed order.
 
   }
 
@@ -21,11 +11,12 @@ The bug I chose was the bug in `ArrayExamples.java`, specifically in the `revers
    ```
    # code block
    @Test
-   public void testReversedLR(){
+   public void testReversedLR1(){
     int[] input1 = {1,2,3,4,5};
     assertArrayEquals(new int[]{5,4,3,2,1}, ArrayExamples.reversed(input1));
    }
    ```
+   
 2) An input that doesn't induce a failure, as a JUnit test and any associated code 
    ```
    # code block
@@ -36,4 +27,40 @@ The bug I chose was the bug in `ArrayExamples.java`, specifically in the `revers
    }
    ```
    
+3) The symptom, as the output of running the tests
+
+![Image](LR3SS1.png)
+![Image](LR3SS2.png)
+
+The screenshots show the output for the two tests made in the first two parts. It shows 4 tests run because the new tests were added to the `ArrayTests.java` file, which already included 2 tests. 
+
+4) The bug, as the before-and-after code change required to fix it
+
+
+Buggy Code:
+
+    ```
+    # code block
+    static int[] reversed(int[] arr) {
+        int[] newArray = new int[arr.length]; 
+        for(int i = 0; i < arr.length; i += 1) {
+          arr[i] = newArray[arr.length - i - 1];
+        }
+    return arr;
+    }
+    ```
+    
+Fixed Code:
    
+    ```
+    # code block
+    static int[] reversed(int[] arr) {
+        int[] newArray = new int[arr.length]; //5
+        for(int i = 0; i < arr.length; i += 1) {
+          newArray[i] = arr[arr.length - i - 1];
+        }
+    return newArray;
+    }
+    ```
+The fix addresses the code because in the buggy code, the program would change the values of     the original array rather than the new one. Because of this, it would overwrite the values, making the original values inaccessible later. The code would also replace the values of the original array with the values from the new, empty array. The fixed code changes it so that the new array, starting at index 0, is given the value of the last index in the old array. As the index of the new array increases, the index of the old array dereases, thus reversing the order of the array. The fixed code also returns the new array, rather than the original one, which was as the program intended.
+
