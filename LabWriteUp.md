@@ -124,7 +124,7 @@ find technical/ -maxdepth 2 -type f
 
 Output:
 
-![image](LR3ss8.png)
+![image](LR3SS8.png)
 
 The code finds and lists the path for all files within a depth of 2 from the given directory ( in this case, the `technical directory ). This command can be useful when searching for files in any given directory and its subdirectories within a certain depth.
 
@@ -156,7 +156,7 @@ The code finds and lists the absolute path for all files in the given directory 
 
 Sources: 
 
-![link](https://www.redhat.com/sysadmin/linux-find-command)
+[Link](https://www.redhat.com/sysadmin/linux-find-command)
 
 
 
