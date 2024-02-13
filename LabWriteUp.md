@@ -62,7 +62,7 @@ The fix addresses the code because in the buggy code, the program would change t
 
 
 ## Part 2 - Researching Commands
-1) The `-name` option for the `find` command can search for a file by name and return the absoulate path.
+1) 
 
 ```
 find technical/ -name '*.txt'
@@ -71,7 +71,7 @@ Output:
 
 ![image](LR3SS3.png)
 
-The code finds all files in the `technical` directory that ends in `.txt`. This can be useful when searching for all of the files of a certain type ( in this case, finding all text files in the directory ).
+The code finds all files in the `technical` directory that ends in `.txt`. This can be useful when searching for all of the files of a certain type ( in this case, finding all text files in the directory ). The results above shown a portion of the long output. 
 
 2) 
 ```
@@ -83,8 +83,75 @@ Output:
 
 The code finds the absolute path of a file named `pmed.0020075.txt` in the `technical` directory. This can be useful if you know the name of a file but don't know the location. It will return the absolute path, showing the directories leading to the file. 
 
+3) 
+```
+find technical/ -type d
+```
+
+Output:
+
+![image](LR3SS5.png)
+
+The code finds and lists the absolute path for all files of type d (directories and subdirectories)  in the `technical` directory. This can be useful if you need to filter the results by file type when looking through a directory.
+
+4)
+```
+find technical/ -type f
+```
+
+Output:
+
+![image](LR3SS6.png)
+
+The code finds and lists the absolute path for all files of type f (all files) in the `technical` directory. The output is similar to the output in #1 because the directory mainly consists of text files. This command can be useful when trying to find a list of all files in both the main and subdirectories.
+
+5)
+```
+find technical/ -maxdepth 2 -type d
+```
+
+Output:
+
+![image](LR3SS7.png)
+
+The code finds and lists the absolute path for directories and subdirectories within a depth of 2 from the given directory ( in this case, the `technical` directory ). Because the `ls` command has many restrictions, this command can be useful when searching a directory for subdirectories within a certain depth. 
 
 
+6)
+```
+find technical/ -maxdepth 2 -type f
+```
+
+Output:
+
+![image](LR3ss8.png)
+
+The code finds and lists the path for all files within a depth of 2 from the given directory ( in this case, the `technical directory ). This command can be useful when searching for files in any given directory and its subdirectories within a certain depth.
+
+
+7)
+
+```
+find technical/ -ipath "*About_LSC*"
+```
+
+Output:
+
+![image](LS3SS9.png)
+
+The code finds and lists the absolute path in the given directory that contain the path given in the argument following `ipath`. This can be a useful command if you know part of the path for a directory, but do not know the location of it.
+
+
+8) 
+```
+find technical/ -type f -ipath "*About_LSC*"
+```
+
+Output: 
+
+![image](LR3SS10.png)
+
+The code finds and lists the absolute path for all files in the given directory and subdirectories that contain `/About_LSC` in their respective path. The `ipath` option can be used in junction with the `type` option to filter the results to only a certain type ( in this case, returns all files, and no directories ). This command can be useful when, similarly to the last command, you know part of the path for a file, and do not know the location of it. In this case, you would be searching for a file while knowing part of the path. 
 
 
 
