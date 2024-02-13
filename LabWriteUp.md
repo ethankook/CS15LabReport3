@@ -154,8 +154,7 @@ The code finds and lists the absolute path for all files in the given directory 
 
 
 Sources: 
-
-[Link](https://www.redhat.com/sysadmin/linux-find-command)
+https://www.redhat.com/sysadmin/linux-find-command
 
 
 
