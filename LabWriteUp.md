@@ -35,8 +35,7 @@ The screenshots show the output for the two tests made in the first two parts. I
 
 
 Buggy Code:
-
-    ```
+```
     static int[] reversed(int[] arr) {
         int[] newArray = new int[arr.length]; 
         for(int i = 0; i < arr.length; i += 1) {
@@ -44,11 +43,9 @@ Buggy Code:
         }
     return arr;
     }
-    ```
-    
+ ```   
 Fixed Code:
-   
-    ```
+```   
     static int[] reversed(int[] arr) {
         int[] newArray = new int[arr.length]; //5
         for(int i = 0; i < arr.length; i += 1) {
@@ -56,7 +53,7 @@ Fixed Code:
         }
     return newArray;
     }
-    ```
+```
 The fix addresses the code because in the buggy code, the program would change the values of     the original array rather than the new one. Because of this, it would overwrite the values, making the original values inaccessible later. The code would also replace the values of the original array with the values from the new, empty array. The fixed code changes it so that the new array, starting at index 0, is given the value of the last index in the old array. As the index of the new array increases, the index of the old array dereases, thus reversing the order of the array. The fixed code also returns the new array, rather than the original one, which was as the program intended.
 
 
